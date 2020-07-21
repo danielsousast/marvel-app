@@ -84,13 +84,9 @@ const MoreDetails: React.FC = () => {
       setLoading(true);
 
       const seriesResp = await api.get(`characters/${item.id}/series`);
-      const eventsResp = await api.get(`characters/${item.id}/events`);
       const comicsResp = await api.get(`characters/${item.id}/comics`);
       setSeries(seriesResp.data.data.results);
       setSeriesCount(seriesResp.data.data.results.length);
-
-      setEvents(eventsResp.data.data.results);
-      setEventsCount(eventsResp.data.data.results.length);
 
       setComics(comicsResp.data.data.results);
       setCoomicsCount(comicsResp.data.data.results.length);
@@ -162,10 +158,6 @@ const MoreDetails: React.FC = () => {
               <Icon name="book" size={30} color="rgba(255, 255, 255, 0.4)" />
               <CardItemLabel> {comicsCount} Comics</CardItemLabel>
             </CardItem>
-            <CardItem>
-              <Icon name="rocket1" size={30} color="rgba(255, 255, 255, 0.4)" />
-              <CardItemLabel> {eventsCount} Events</CardItemLabel>
-            </CardItem>
           </CardItemsView>
 
           <Description>
@@ -197,21 +189,6 @@ const MoreDetails: React.FC = () => {
               >
                 {comics.map(comic => (
                   <Card key={comic.id} item={comic} />
-                ))}
-              </Scroll>
-            </>
-          )}
-
-          {events.length > 0 && (
-            <>
-              <SectionTitle>Events</SectionTitle>
-              <Scroll
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ paddingRight: 30 }}
-              >
-                {events.map(serie => (
-                  <Card key={serie.id} item={serie} />
                 ))}
               </Scroll>
             </>

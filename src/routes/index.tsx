@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import MoreDetails from '../screens/MoreDetails';
 import Search from '../screens/Search';
-import Home from '../screens/Home';
+//import Home from '../screens/Home';
 import Welcome from '../screens/Welcome';
 import SlideDetails from '../screens/SlideDetails';
 import Favorites from '../screens/Favorites';
@@ -18,7 +18,7 @@ const Routes: React.FC = () => {
       }}
     >
       <Stack.Screen name="Welcome" component={Welcome} />
-      <Stack.Screen name="Home" component={Home} />
+
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="Favorites" component={Favorites} />
       <Stack.Screen name="Slide" component={SlideDetails} />

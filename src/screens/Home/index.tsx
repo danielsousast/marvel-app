@@ -85,8 +85,6 @@ const Home: React.FC = () => {
             />
           </Header>
 
-          <SeriesList />
-
           <SectionRow>
             <SectionTitle>Marvel Characters</SectionTitle>
             <DetailsButton onPress={() => navigation.navigate('Search')}>

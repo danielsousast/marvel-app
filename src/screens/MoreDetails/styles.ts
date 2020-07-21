@@ -72,20 +72,21 @@ export const CardItemsView = styled.View`
   width: 90%;
   align-self: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
   background: ${colors.dark};
-  border-radius: 10px;
+  border-radius: 8px;
 `;
 
 export const CardItem = styled.View`
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 `;
 export const CardItemLabel = styled.Text`
-  margin-top: 8px;
   color: ${colors.white};
+  margin-left: 10px;
 `;
 
 export const SectionTitle = styled.Text`

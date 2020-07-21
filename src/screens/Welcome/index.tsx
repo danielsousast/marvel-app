@@ -15,7 +15,7 @@ const Welcome: React.FC = () => {
   const navigation = useNavigation();
 
   const handleNavigation = useCallback(() => {
-    navigation.navigate('Home');
+    navigation.navigate('Search');
   }, [navigation]);
 
   return (

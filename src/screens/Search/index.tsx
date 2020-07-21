@@ -16,6 +16,8 @@ import {
   SectionRow,
   SectionTitle,
   BackButton,
+  Header,
+  Logo,
 } from './styles';
 
 interface ParamsData {
@@ -101,9 +103,12 @@ const Serach: React.FC = () => {
   return (
     <>
       <Container>
-        <BackButton onPress={handleGoBack}>
-          <Icon name="arrowleft" color={colors.primary} size={26} />
-        </BackButton>
+        <Header>
+          <Logo
+            source={require('../../assets/logo.png')}
+            resizeMode="contain"
+          />
+        </Header>
         <Input
           icon="search1"
           placeholder="Character name"

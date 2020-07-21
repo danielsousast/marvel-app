@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { useDispatch, useStore } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
@@ -32,6 +32,8 @@ interface DetailsProps {
           path: string;
           extension: string;
         };
+        resourceURI: string;
+        urls: Array;
       }
     | undefined;
   closeModal(): void;
@@ -45,6 +47,7 @@ interface ItemData {
     path: string;
     extension: string;
   };
+  resourceURI: string;
 }
 
 const Details: React.FC<DetailsProps> = ({ visible, item, closeModal }) => {
@@ -99,8 +102,7 @@ const Details: React.FC<DetailsProps> = ({ visible, item, closeModal }) => {
   }, []);
 
   const handleNavigation = useCallback(param => {
-    closeModal();
-    navigation.navigate('MoreDetails', { item: param });
+    Linking.openURL('https://www.marvel.com/characters/');
   }, []);
 
   return (

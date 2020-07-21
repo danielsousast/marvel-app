@@ -11,6 +11,21 @@ export const Container = styled.View`
   padding-right: 20px;
 `;
 
+export const Header = styled.View`
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 10px;
+`;
+
+export const Logo = styled.Image`
+  height: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+`;
+
 export const InputView = styled.View`
   height: 50px;
   width: 100%;
