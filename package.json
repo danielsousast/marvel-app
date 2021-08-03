@@ -19,7 +19,7 @@
     "axios": "^0.19.2",
     "immer": "^7.0.5",
     "react": "16.13.1",
-    "react-native": "0.63.0",
+    "react-native": "0.64.1",
     "react-native-anchor-carousel": "^3.1.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-linear-gradient": "^2.5.6",
